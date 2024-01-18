@@ -1,10 +1,14 @@
-// import { Linter } from "eslint";
-import SelectCountrie from "./SelectCountrie";
-
+//  import { Linter } from "eslint";
+// import SelectCountrie from "./SelectCountrie";
+import { useState } from "react";
 function Countries() {
 let winners = [{year: 2000, champion: "Cameroon"},{year: 2002, champion: "Cameroon"},{year: 2004, champion: "Tunisia"},{year: 2006, champion: "Egypt"},{year: 2008, champion: "Egypt"},{year: 2010, champion: "Egypt"},{year: 2012, champion: "Zambia"},{year: 2013, champion: "Nigeria"},{year: 2015, champion: "Ivory Coast"},{year: 2017, champion: "Cameroon"},{year: 2019, champion: "Algeria"},{year: 2021, champion: "Senegal"} ]
 // const selectCont = (p) => {console.log(p)  }
 // let schow = (i) => { console.log(i)  }
+
+let [val, setVal] = useState(0);
+const incre = () => { setVal(val+1); console.log(val) }
+
 return (
     <>
       <br /><br />
@@ -16,17 +20,50 @@ return (
     //  <SelectCountrie  champion= {winner.champion}/>
     
      }  
-{console.log(winners[7])}
-{/* if (button[i]) {
-  
-} */}
+{/* {console.log(winners[7])} */}
 
+<br /><br /><br /><br />
+     <h3>Select the button to show more informations about the winner:</h3>
+       <button onClick={incre}> Click here  </button>
+       {/* <h1>{champion}</h1> */}
+    
 
-{true &&
-<SelectCountrie  champion= {winners[5].champion}/>
+{ val<12?
+    ( <h5>{winners[val].champion}</h5>)
+: val = 0
 }
+
+{/* {<SelectCountrie  />} */}
     </>
   );
+
+  // import { useState } from "react";
+
+  // function SelectCountrie({champion}) {
+  // let [val, setVal] = useState(0);
+  // const incre = () => { setVal(val+1); console.log(val) }
+  //   return (
+  // <>
+  // <br /><br /><br /><br />
+  //     <h3>Select the button to show more informations about the winner:</h3>
+  //     <button onClick={incre}> Click here  </button>
+  //     <h1>{champion}</h1>
+  //   <h5>{val}</h5>
+  //     </> 
+  //     );
+      
+      // ;
+  
+  
+  
+
+
+
+
+
+
+
+
 }
 
 export default Countries;
