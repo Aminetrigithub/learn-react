@@ -4,6 +4,7 @@
 // import './App.css'
 
 import Countries from "./components/Countries"
+import Header from "./components/Header"
 import Navbar from "./components/navbar"
 
 // import Presentation from "./components/presentation"
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
     <Navbar />
+    <Header />
     {/* <Presentation /> */}
     <Countries />    
     </>
